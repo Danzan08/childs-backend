@@ -1,5 +1,7 @@
 package com.danzan.springjwt.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
@@ -27,6 +29,7 @@ public class Child {
     private String patronymic;
 
     @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern="dd.MM.yyyy")
     @Column(name = "birth_date")
     private Date birthDate;
 
@@ -43,6 +46,10 @@ public class Child {
 
     @Column(name = "active")
     private Boolean isActive;
+
+    @Size(max = 11)
+    @Column(name = "snils")
+    private String snils;
 
     @ManyToOne
     @JoinColumn(name = "user_id", foreignKey = @ForeignKey(name = "fk_user_id"))
@@ -152,4 +159,14 @@ public class Child {
     public void setDocument(Set<Document> document) {
         this.document = document;
     }
+
+    public String getSnils() {
+        return snils;
+    }
+
+    public void setSnils(String snils) {
+        this.snils = snils;
+    }
+
+
 }
