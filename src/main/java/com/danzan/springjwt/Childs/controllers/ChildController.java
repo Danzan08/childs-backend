@@ -2,6 +2,7 @@ package com.danzan.springjwt.Childs.controllers;
 
 import com.danzan.springjwt.Childs.models.Child;
 import com.danzan.springjwt.Childs.repository.ChildRepository;
+import com.danzan.springjwt.Childs.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +18,9 @@ public class ChildController {
 
     @Autowired
     ChildRepository childRepository;
+
+    @Autowired
+    UserRepository userRepository;
 
 
     @GetMapping("/childs/{id}")

@@ -62,6 +62,8 @@ public class Child {
     @OneToMany(mappedBy = "child", cascade = CascadeType.ALL)
     private Set<Document> document;
 
+    public Child() {
+    }
 
     public Integer getId() {
         return id;

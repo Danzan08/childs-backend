@@ -59,9 +59,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				// разрешаем всем доступ к rest api логина
-			.authorizeRequests().antMatchers("/login", "/registration").permitAll()
+			.authorizeRequests().antMatchers("/login", "/registration","/api/**").permitAll()
 				// после авторизации открываем все остальные rest api
-			.antMatchers("/api/test/**").permitAll()
+			.antMatchers("/api/**").permitAll()
 			.anyRequest().authenticated();
 
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

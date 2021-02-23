@@ -41,6 +41,12 @@ public class Fias {
         this.parentguid = parentguid;
     }
 
+    public Fias(String formalName, String shortName, UUID aoguid) {
+        this.shortName = shortName;
+        this.formalName = formalName;
+        this.aoguid = aoguid;
+    }
+
     public UUID getAoid() {
 
         return aoid;
