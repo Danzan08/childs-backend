@@ -1,4 +1,4 @@
-package com.danzan.springjwt.Childs.security;
+package com.danzan.springjwt.Childs.Auth.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +14,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.danzan.springjwt.Childs.security.jwt.AuthEntryPointJwt;
-import com.danzan.springjwt.Childs.security.jwt.AuthTokenFilter;
+import com.danzan.springjwt.Childs.Auth.security.jwt.AuthEntryPointJwt;
+import com.danzan.springjwt.Childs.Auth.security.jwt.AuthTokenFilter;
 import com.danzan.springjwt.Childs.Service.UserAuthorityServiceImpl;
 
 @Configuration
@@ -59,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				// разрешаем всем доступ к rest api логина
-			.authorizeRequests().antMatchers("/login", "/registration","/api/**").permitAll()
+			.authorizeRequests().antMatchers("/login", "/registration").permitAll()
 				// после авторизации открываем все остальные rest api
 			.antMatchers("/api/**").permitAll()
 			.anyRequest().authenticated();

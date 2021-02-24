@@ -1,4 +1,4 @@
-package com.danzan.springjwt.Childs.payload.response;
+package com.danzan.springjwt.Childs.Auth.payload.response;
 
 import java.util.List;
 

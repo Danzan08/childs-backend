@@ -15,10 +15,10 @@ import com.danzan.springjwt.Childs.Service.UserAuthorityImpl;
 import com.danzan.springjwt.Childs.models.ERole;
 import com.danzan.springjwt.Childs.models.Role;
 import com.danzan.springjwt.Childs.models.User;
-import com.danzan.springjwt.Childs.payload.request.LoginRequest;
-import com.danzan.springjwt.Childs.payload.request.SignupRequest;
-import com.danzan.springjwt.Childs.payload.response.JwtResponse;
-import com.danzan.springjwt.Childs.payload.response.MessageResponse;
+import com.danzan.springjwt.Childs.Auth.payload.request.LoginRequest;
+import com.danzan.springjwt.Childs.Auth.payload.request.SignupRequest;
+import com.danzan.springjwt.Childs.Auth.payload.response.JwtResponse;
+import com.danzan.springjwt.Childs.Auth.payload.response.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.danzan.springjwt.Childs.repository.RoleRepository;
 import com.danzan.springjwt.Childs.repository.UserRepository;
-import com.danzan.springjwt.Childs.security.jwt.JwtUtils;
+import com.danzan.springjwt.Childs.Auth.security.jwt.JwtUtils;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

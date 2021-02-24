@@ -27,11 +27,11 @@ INSERT INTO organizations VALUES
     (15, 'РЦ для детей и подростков с ОВ', 'Казенное учреждение Республики Калмыкия «Реабилитационный центр для детей и подростков с ограниченными возможностями»',4);
 
 
-INSERT INTO users (user_id, email, first_name, password, patronymic, phone_number, sur_name, username) VALUES
-    (1, 'admin@minsoc.ru', 'Админов', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Админович','34605','Админов', 'admin'),
-    (2, 'moderator@minsoc.ru', 'Модераторов', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Модераторович','34605','Модераторов', 'moderator'),
-    (3, 'user@minsoc.ru', 'Юзеров', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Юзерович','34919','Юзеорв', 'user'),
-    (4, 'user2@minsoc.ru', 'Юзеров2', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Юзерович2','34919','Юзеорв2', 'user2');
+INSERT INTO users (user_id, email, first_name, password, patronymic, phone_number, sur_name, username, organization_id) VALUES
+    (1, 'admin@minsoc.ru', 'Админов', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Админович','34605','Админов', 'admin',2),
+    (2, 'moderator@minsoc.ru', 'Модераторов', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Модераторович','34605','Модераторов', 'moderator',1),
+    (3, 'user@minsoc.ru', 'Юзеров', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Юзерович','34919','Юзеорв', 'user',1),
+    (4, 'user2@minsoc.ru', 'Юзеров2', '$2a$10$MR8DngNq7Uxhv0QsIqp61exMtTwneiwmWFR3mBgaftd0bIRYdVcf2', 'Юзерович2','34919','Юзеорв2', 'user2',2);
 INSERT INTO user_roles VALUES
     (1,  3),
     (2,  2),
@@ -49,13 +49,13 @@ INSERT INTO childs (child_id, active, actual_address, birth_date, first_name, pa
 
 
 
-INSERT INTO documents (document_id, child_id, type_document, serial) VALUES
+/*INSERT INTO documents (document_id, child_id, type_document, serial) VALUES
     (1, 1,  2, '12345678900'),
     (2, 2,  2, '12345678900'),
     (3, 3,  2, '23456789000'),
     (4, 4,  2, '34567890000'),
     (5, 5,  2, '12312312333'),
-    (6, 5,  1, '12312312314');
+    (6, 5,  1, '12312312314');*/
 
 
 

@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7d1a830-fdba-41fa-8c3c-d4ab6c129886" name="Default Changelist" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/controllers/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/controllers/ChildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/controllers/ChildController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/models/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/models/Child.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/payload/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/payload/request/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/payload/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/payload/request/SignupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/payload/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/payload/response/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/payload/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/payload/response/MessageResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/repository/ChildRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/repository/ChildRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Fias/controllers/FiasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Fias/controllers/FiasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Fias/model/Fias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Fias/model/Fias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/repository/DocumentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/repository/DocumentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/Auth/security/jwt/JwtUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Fias/repository/FiasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Fias/repository/FiasRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/ChildService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/ChildService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/ChildServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/ChildServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/DocumentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/DocumentService.class" afterDir="false" />
@@ -26,11 +30,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/UserAuthorityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/UserAuthorityServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/ChildController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/ChildController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/DocumentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/TestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Child.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Document.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/ERole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/ERole.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Organization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Organization.class" afterDir="false" />
@@ -38,29 +42,23 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/TypeOrganization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/TypeOrganization.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/request/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/request/SignupRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/request/SignupRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/response/JwtResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/response/JwtResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/response/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/response/MessageResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/request/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/request/SignupRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/response/JwtResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/payload/response/MessageResponse.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/DocumentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/DocumentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/OrgRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/OrgRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/RoleRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/AuthEntryPointJwt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/AuthEntryPointJwt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/AuthTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/AuthTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/JwtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/AuthEntryPointJwt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/AuthTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/security/jwt/JwtUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Configuration/ChildDataSourceConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Configuration/ChildDataSourceConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Configuration/FiasDataSourceConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Configuration/FiasDataSourceConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Configuration/HibernateConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Configuration/HibernateConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Fias/controllers/FiasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Fias/controllers/FiasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Fias/model/Fias.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Fias/model/Fias.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Fias/repository/FiasRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Fias/repository/FiasRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/SpringBootSecurityJwtApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/SpringBootSecurityJwtApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/danzan/springjwt/SpringBootSecurityJwtApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/danzan/springjwt/SpringBootSecurityJwtApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +73,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -117,6 +116,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootSecurityJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-security-jwt" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.danzan.springjwt.SpringBootSecurityJwtApplication" />

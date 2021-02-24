@@ -2,14 +2,17 @@ package com.danzan.springjwt.Childs.controllers;
 
 import com.danzan.springjwt.Childs.models.Child;
 import com.danzan.springjwt.Childs.repository.ChildRepository;
-import com.danzan.springjwt.Childs.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -18,10 +21,6 @@ public class ChildController {
 
     @Autowired
     ChildRepository childRepository;
-
-    @Autowired
-    UserRepository userRepository;
-
 
     @GetMapping("/childs/{id}")
     public ResponseEntity<Child> getTutorialById(@PathVariable("id") Integer id) {
@@ -34,14 +33,32 @@ public class ChildController {
         }
     }
 
+    // Если у пользователя нет админских или модераторских прав, то он видит только карточки своего учреждения.
     @GetMapping("/childs")
     public ResponseEntity<Iterable<Child>> getAllChilds(@RequestParam(required = false) String surName) {
-        if(surName == null) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String getRole = auth.getAuthorities().toString();
+        if (getRole.equals("[ROLE_ADMIN]") || getRole.equals("[ROLE_MODERATOR]")) {
             return ResponseEntity.ok(childRepository.findAll());
         } else {
-            return ResponseEntity.ok(childRepository.findBySurNameContainingIgnoreCase(surName));
+            Object principal = auth.getPrincipal();
+            String username = null;
+            if (principal instanceof UserDetails) {
+                username = ((UserDetails) principal).getUsername();
+            } else {
+                username = principal.toString();
+            }
+            return ResponseEntity.ok(childRepository.findAllNative(username));
         }
     }
+
+    // Список снилсов для валидации в форме, на существование снилса при создании ребенка.
+    @GetMapping("/snils")
+    public ResponseEntity<List<Object>> getAllChilds() {
+        return ResponseEntity.ok(childRepository.snilsList());
+    }
+
+
 
     @DeleteMapping("/childs/{id}")
     public ResponseEntity<Child> deleteChild(@PathVariable Integer id) {

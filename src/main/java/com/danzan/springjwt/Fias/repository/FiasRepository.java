@@ -25,9 +25,6 @@ public interface FiasRepository extends JpaRepository<Fias, UUID> {
     @Query("SELECT f FROM Fias f where f.aolevel IN (7) and  f.parentguid = :parentguid order by f.formalName")
     List<Fias> findStreetsNative(@Param("parentguid") UUID parentguid);
 
-
-
-
     @Query(value = "select * from addrobj limit 100", nativeQuery = true)
     List<Fias> findAllNative();
 }

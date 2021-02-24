@@ -1,4 +1,4 @@
-package com.danzan.springjwt.Childs.payload.request;
+package com.danzan.springjwt.Childs.Auth.payload.request;
 
 import com.danzan.springjwt.Childs.models.Organization;
 

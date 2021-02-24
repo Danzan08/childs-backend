@@ -10,6 +10,10 @@ public interface ChildRepository extends JpaRepository<Child, Integer> {
 
     List<Child> findBySurNameContainingIgnoreCase(String surName);
 
+    @Query("FROM Child c where c.organization.id = (SELECT u.organization.id FROM User u where u.username = :username)")
+    List<Child> findAllNative(String username);
 
+    @Query("SELECT c.snils FROM Child c")
+    List<Object> snilsList();
 
 }

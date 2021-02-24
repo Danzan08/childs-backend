@@ -1,4 +1,4 @@
-package com.danzan.springjwt.Childs.security.jwt;
+package com.danzan.springjwt.Childs.Auth.security.jwt;
 
 import java.io.IOException;
 
