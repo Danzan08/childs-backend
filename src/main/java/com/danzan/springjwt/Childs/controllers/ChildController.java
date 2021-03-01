@@ -19,6 +19,23 @@ import java.util.Optional;
 @RequestMapping(path = "/api")
 public class ChildController {
 
+    private String getUserName() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        Object principal = auth.getPrincipal();
+        String username = null;
+        if (principal instanceof UserDetails) {
+            username = ((UserDetails) principal).getUsername();
+        } else {
+            username = principal.toString();
+        }
+        return username;
+    }
+
+    private String getUserRole() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        return auth.getAuthorities().toString();
+    }
+
     @Autowired
     ChildRepository childRepository;
 
@@ -36,19 +53,11 @@ public class ChildController {
     // Если у пользователя нет админских или модераторских прав, то он видит только карточки своего учреждения.
     @GetMapping("/childs")
     public ResponseEntity<Iterable<Child>> getAllChilds(@RequestParam(required = false) String surName) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String getRole = auth.getAuthorities().toString();
-        if (getRole.equals("[ROLE_ADMIN]") || getRole.equals("[ROLE_MODERATOR]")) {
+        String getUserRole = getUserRole();
+        if (getUserRole.equals("[ROLE_ADMIN]") || getUserRole.equals("[ROLE_MODERATOR]")) {
             return ResponseEntity.ok(childRepository.findAll());
         } else {
-            Object principal = auth.getPrincipal();
-            String username = null;
-            if (principal instanceof UserDetails) {
-                username = ((UserDetails) principal).getUsername();
-            } else {
-                username = principal.toString();
-            }
-            return ResponseEntity.ok(childRepository.findAllNative(username));
+            return ResponseEntity.ok(childRepository.findAllNative(getUserName()));
         }
     }
 
@@ -59,10 +68,18 @@ public class ChildController {
     }
 
 
-
+    /*Данный контроллер не удаляет карточку,а всего лишь переводит в статус не активный.
+    В будущем пригодится для архива данных.*/
     @DeleteMapping("/childs/{id}")
     public ResponseEntity<Child> deleteChild(@PathVariable Integer id) {
-        childRepository.deleteById(id);
+        String getUserRole = getUserRole();
+        Optional<Child> child = childRepository.findById(id);
+        if (!child.isPresent())
+            return ResponseEntity.notFound().build();
+
+        Child result = child.get();
+        result.setActive(false);
+        childRepository.save(result);
         return ResponseEntity.noContent().build();
     }
 
