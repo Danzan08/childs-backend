@@ -7,6 +7,8 @@
     <list default="true" id="a7d1a830-fdba-41fa-8c3c-d4ab6c129886" name="Default Changelist" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/controllers/ChildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/controllers/ChildController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/repository/ChildRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danzan/springjwt/Childs/repository/ChildRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Auth/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/Auth/security/WebSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/ChildController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danzan/springjwt/Childs/controllers/ChildController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +66,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringBootSecurityJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-boot-security-jwt" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.danzan.springjwt.SpringBootSecurityJwtApplication" />
@@ -95,7 +108,8 @@
       <workItem from="1614109584543" duration="3903000" />
       <workItem from="1614236506299" duration="935000" />
       <workItem from="1614322289895" duration="12000" />
-      <workItem from="1614328214204" duration="1681000" />
+      <workItem from="1614328214204" duration="2245000" />
+      <workItem from="1614690815402" duration="10738000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1610059128217</created>

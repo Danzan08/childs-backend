@@ -16,8 +16,15 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping(path = "/api")
+@RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ChildController {
+
+    final String admin = "[ROLE_ADMIN]";
+    final String user = "[ROLE_USER]";
+    final String moderator = "[ROLE_MODERATOR]";
+
+    @Autowired
+    ChildRepository childRepository;
 
     private String getUserName() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -36,13 +43,25 @@ public class ChildController {
         return auth.getAuthorities().toString();
     }
 
-    @Autowired
-    ChildRepository childRepository;
+    // Если у пользователя нет админских или модераторских прав, то он видит только карточки своего учреждения.
+    @GetMapping("/childs")
+    public ResponseEntity<Iterable<Child>> getAllChilds(@RequestParam(required = false) String search) {
+        if (getUserRole().equals(admin) || getUserRole().equals(user)) {
+            return ResponseEntity.ok(childRepository.findAll());
+        } else {
+            return ResponseEntity.ok(childRepository.findAllWithParams(getUserName()));
+        }
+    }
+
 
     @GetMapping("/childs/{id}")
     public ResponseEntity<Child> getTutorialById(@PathVariable("id") Integer id) {
-        Optional<Child> childData = childRepository.findById(id);
-
+        Optional<Child> childData = null;
+        if (getUserRole().equals(admin) || getUserRole().equals(moderator)) {
+            childData = childRepository.findById(id);
+        } else {
+            childData = childRepository.findByIdWithParam(id, getUserName());
+        }
         if (childData.isPresent()) {
             return new ResponseEntity<>(childData.get(), HttpStatus.OK);
         } else {
@@ -50,16 +69,7 @@ public class ChildController {
         }
     }
 
-    // Если у пользователя нет админских или модераторских прав, то он видит только карточки своего учреждения.
-    @GetMapping("/childs")
-    public ResponseEntity<Iterable<Child>> getAllChilds(@RequestParam(required = false) String surName) {
-        String getUserRole = getUserRole();
-        if (getUserRole.equals("[ROLE_ADMIN]") || getUserRole.equals("[ROLE_MODERATOR]")) {
-            return ResponseEntity.ok(childRepository.findAll());
-        } else {
-            return ResponseEntity.ok(childRepository.findAllNative(getUserName()));
-        }
-    }
+
 
     // Список снилсов для валидации в форме, на существование снилса при создании ребенка.
     @GetMapping("/snils")
@@ -72,7 +82,6 @@ public class ChildController {
     В будущем пригодится для архива данных.*/
     @DeleteMapping("/childs/{id}")
     public ResponseEntity<Child> deleteChild(@PathVariable Integer id) {
-        String getUserRole = getUserRole();
         Optional<Child> child = childRepository.findById(id);
         if (!child.isPresent())
             return ResponseEntity.notFound().build();
